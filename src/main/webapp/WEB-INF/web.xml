@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<display-name>Enotes</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- register mapping -->
+	<servlet>
+		<servlet-name>register</servlet-name>
+		<servlet-class>com.company.servlet.UserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/userServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- login mapping -->
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.company.servlet.loginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/loginservlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- logout mapping -->
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>com.company.servlet.LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- EditNote mapping -->
+	<servlet>
+		<servlet-name>edit</servlet-name>
+		<servlet-class>com.company.servlet.EditNoteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>edit</servlet-name>
+		<url-pattern>/EditNoteServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+</web-app>
